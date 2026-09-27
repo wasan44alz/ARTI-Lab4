@@ -1,0 +1,33 @@
+Task 2 - Variables and Family Facts
+
+1. Show the names of all females.
+49 ?- female(X).
+X = sara ;
+X = nora.
+
+
+2. Show whether there is any male.
+50 ?- male(_).
+true .
+
+
+3. Show the grandparent of Faisal.
+51 ?- parent(Grandparent, Parent), parent(Parent, faisal).
+Grandparent = ali,
+Parent = muhammad .
+
+
+4. Show all daughters of Ahmad.
+52 ?- parent(ahmad, Daughter), female(Daughter).
+Daughter = sara ;
+Daughter = nora .
+
+
+5. Show whether Ahmad and Muhammad have a common parent.
+53 ?- parent(Parent, ahmad), parent(Parent, muhammad).
+Parent = ali.
+
+
+6. Show whether Khan is the brother of Nora.
+54 ?- male(khan), parent(Parent, khan), parent(Parent, nora).
+Parent = ahmad.
